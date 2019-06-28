@@ -1,138 +1,319 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Ryan Johnson</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<meta charset="utf-8">
+<title>ShiftCV v1.1 - Responsive and Clean HTML Template Documentation</title>
+<meta name="description" content="Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form here. Thanks so much!">
+<meta name="author" content="ThemeREX">
+<meta name="copyright" content="ThemeREX">
+<meta name="date" content="2013-03-10T00:00:00+01:00">
+<link rel="stylesheet" href="css/style.css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css' />
+<script src="js/jquery.1.6.4.js"></script>
+<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script>document.createElement('section');var duration=500,easing='swing';</script>
+<script src="js/script.js"></script>
 </head>
 <body>
+<div class="tail-right"></div>
+<header id="header">
+  <div class="wrapper">
+    <div class="doc-title"><span>ShiftCV</span> &mdash; Responsive and Clean HTML Template Documentation by <a href="http://themeforest.net/user/ThemeREX" target="_blank" title="Our portfolio">ThemeREX</a></div>
+    <a href="http://shifthtml.themerex.net/" class="demo-link" target="_blank">View Demo</a></div>
+</header>
+<div id="main-wrapper">
+  <div id="main" class="clearfix">
+    <aside id="sidebar" class="sidebar">
+      <div id="logo">Shift<span>CV</span></div>
+      <ul id="doc-nav">
+        <li><a href="#html">HTML Structure</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#print">Print page</a></li>
+        <li><a href="#psd">PSD</a></li>
+        <li><a href="#sources">Sources and Credits</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </aside>
+    <div id="content">
+      <section id="html">
+        <h3>HTML Structure</h3>
+        <h4>Customization block</h4>
+        <p><b>Scriptis and styles responsible for customization panel </b> <br>
+          directory site.../custom_tools/js/custom.js <br>
+          directory site.../custom_tools/js/jquery.cookie.js <br>
+          directory site.../custom_tools/css/custom.css</p>
+        <p><b>Switching customization block off</b> <br>
+          directory site.../js/lib.js - line 4</p>
+        <pre>jQuery(document).ready(function(){
+    //include Custom.JS
+    jQuery('head').append('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;custom_tools/css/custom.css&quot;&gt;');
+    jQuery('head').append('&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;custom_tools/css/colorpicker.css&quot;&gt;');
+    jQuery('head').append('&lt;script type=&quot;text/javascript&quot; src=&quot;custom_tools/js/colorpicker.js&quot;&gt;&lt;/script&gt;');
+    jQuery('head').append('&lt;script type=&quot;text/javascript&quot; src=&quot;custom_tools/js/custom-block.js&quot;&gt;&lt;/script&gt;');
+});
+                     </pre>
+        <h3>Backgrounds and schemes</h3>
+        <p><img src="images/fon.jpg" alt="" class="noShadow"></p>
+        <p>Background change should be done by adding the class you need into the tag  &lt;body&gt;</p>
+        <pre>
+&lt;body class="pattern1"&gt;
+<hr>&lt;body class="pattern2"&gt;
+<hr>&lt;body class="pattern3"&gt;
+<hr>&lt;body class="pattern4"&gt;
+<hr>&lt;body class="pattern5"&gt;
+<hr>&lt;body class="bg1"&gt;
+<hr>&lt;body class="bg2"&gt;
+<hr>&lt;body class="bg3"&gt;
+</pre>
+        <h4>Color schemes. Light / dark</h4>
+        <p><img src="images/black_white.jpg" alt="" class="noShadow"></p>
+        <p>To get a dark scheme, you need to add the class <b>dark</b>  into the tag &lt;body&gt;. Correspondingly, to get a light scheme, you need to delete the class <strong>dark</strong></p>
+        <pre>
+&lt;body class="dark"&gt;
+</pre>
+        <h4>Color classes</h4>
+        <p>To edit main color scheme of ShiftCV, you need to change the style table <br>
+          directory site.../style/shift-settings.css</p>
+        <pre>
+/*Blue*/
+.blue{
+	background-color: #327ea3; <div style="width:15px; height:15px; display:inline-block; background-color:#327ea3; vertical-align:top;"></div>
+}
 
-<div id="container">
-	<div id="header">
-	    <div id="picture">
-            <h1>Ryan Johnson</h1>
-            <h2>Projects and Independent Work</h2>
-        </div>
+/*Aqua*/
+.aqua{
+	background-color: #4ca5d0; <div style="width:15px; height:15px; display:inline-block; background-color:#4ca5d0; vertical-align:top;"></div>
+}
+
+/*Green*/
+.green{
+	background-color: #6ca338; <div style="width:15px; height:15px; display:inline-block; background-color:#6ca338; vertical-align:top;"></div>
+}
+
+/*yellow*/
+.yellow{
+	background-color: #ffbc38; <div style="width:15px; height:15px; display:inline-block; background-color:#ffbc38; vertical-align:top;"></div>
+}
+
+
+/*Red*/
+.red{
+	background-color: #e82c0c; <div style="width:15px; height:15px; display:inline-block; background-color:#e82c0c; vertical-align:top;"></div>
+}
+</pre>
+        <h3>Social icons</h3>
+        <p><img src="images/soc.jpg" alt=""></p>
+        <p>href=&quot;#&quot; - a link to your social page<br>
+          &lt;a class="fb" href="<b>http://facebook.com/themerex</b>" title="Facebook"&gt;Facebook&lt;/a&gt; </p>
+        <pre>&lt;ul&gt;
+    &lt;li class=&quot;rss&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;RSS&quot;&gt;RSS&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;fb&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;tw&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;gplus&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Google+&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;lnkd&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Linkedin&quot;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;drb&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Dribbble&quot;&gt;Dribbble&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;vim&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Vimeo&quot;&gt;Vimeo&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;pin&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Pinterst&quot;&gt;Pinterst&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;skp&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Skype&quot;&gt;Skype&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;xing&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Xing&quot;&gt;Xing&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;slide_share&quot;&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot; title=&quot;Slide share&quot;&gt;Slide share&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+
+        <h3>Social Share icons </h3>
+        <p><img src="images/soc2.jpg" alt=""></p>
+        <p>To link up the sharing social buttons, you must change the text in the link. <br>
+        &lt;!-- your text --&gt; <br>
+        &lt;!-- your link --&gt; <br>
+        Example: </p>
+        <pre>&lt;ul id=&quot;post_social_share&quot;&gt;
+    &lt;li class=&quot;tw&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://twitter.com/share?text=<b><u>TEXT-EXAMPLE</u></b>&quot; title=&quot;Twitter&quot;&gt;Twitter&lt;/a&gt; &lt;/li&gt;
+    &lt;li class=&quot;fb&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;http://www.facebook.com/share.php?u=<b><u>http://test.com/page1</u></b>&quot; title=&quot;Facebook&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;gplus&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;https://plusone.google.com/_/+1/confirm?url=<b><u>http://test.com/page1</u></b>&quot; title=&quot;Google+&quot;&gt;Google+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+
+
+        <h3> Sidebar widget example</h3>
+        <pre>
+&lt;aside class=&quot;widget widget_themerex_recent_posts&quot;&gt;
+    &lt;h3 class=&quot;widget_title&quot;&gt;Recent Posts&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;article&quot;&gt;
+        &lt;h4 class=&quot;title&quot;&gt;&lt;a href=&quot;post-link.html&quot;&gt;Quisque odio eros&lt;/a&gt;&lt;/h4&gt;
+            ...
+        &lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/aside&gt;
+</pre>
+
+        <h3>Single post example</h3>
+        <p><img src="images/single.jpg" alt=""></p>
+        <pre>
+&lt;section class=&quot;section blog_section odd&quot;&gt;
+	&lt;div class=&quot;section_header blog_section_header &quot;&gt;
+ 		 &lt;h2 class=&quot;section_title blog_section_title&quot;&gt;
+         &lt;strong&gt;
+         	&lt;span class=&quot;icon icon-pencil&quot;&gt;&lt;/span&gt;&lt;span class=&quot;section_name&quot;&gt;Jul.05&lt;/span&gt;
+         &lt;/strong&gt;
+         &lt;/h2&gt;
+		&lt;div class=&quot;post-info&quot;&gt; 
+        &lt;a href=&quot;author.html&quot; class=&quot;post_author&quot;&gt;&lt;span class=&quot;icon-user&quot;&gt;&lt;/span&gt;admin&lt;/a&gt; 
+        &lt;a href=&quot;post-standart.html&quot; class=&quot;comments_count&quot;&gt;&lt;span class=&quot;icon-comment&quot;&gt;&lt;/span&gt;0&lt;/a&gt; &lt;span class=&quot;post_categories&quot;&gt;&lt;span class=&quot;icon-align-left&quot;&gt;&lt;/span&gt;
+        &lt;a href=&quot;blog-category-arhive.html&quot; class=&quot;post_categories even first&quot;&gt;Post&lt;/a&gt;&lt;/span&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+	&lt;div class=&quot;section_body blog_section_body&quot;&gt;
+  		&lt;article class=&quot;post &quot;&gt;
+    		&lt;h3 class=&quot;post_title&quot;&gt;&lt;a href=&quot;post-standart.html&quot;&gt;Quisque odio eros&lt;/a&gt;&lt;/h3&gt;
+   			&lt;div class=&quot;pic&quot;&gt; &lt;a href=&quot;post-standart.html&quot; class=&quot;w_hover img-link img-wrap&quot;&gt;&lt;img alt=&quot;Quisque odio eros&quot; src=&quot;images_post/girl.jpg&quot;&gt; &lt;span class=&quot;overlay&quot;&gt;&lt;/span&gt; &lt;span class=&quot;link-icon&quot;&gt;&lt;/span&gt; &lt;/a&gt; &lt;/div&gt;
+	&lt;div class=&quot;text&quot;&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    &lt;/p&gt;&lt;div class=&quot;readmore&quot;&gt;&lt;a href=&quot;post-standart.html&quot; class=&quot;more-link&quot;&gt;&lt;span class=&quot;readmore&quot;&gt;Read more&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+ 		&lt;/article&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</pre>
+        <h3 id="portfolioExample">Portfolio example</h3>
+        <p><img src="images/folio.jpg" alt=""></p>
+<pre>
+&lt;article class=&quot;post portfolio_post portfolio_post_12 odd category_4&quot;&gt;
+		&lt;div class=&quot;post_pic portfolio_post_pic&quot;&gt;
+			&lt;a class=&quot;w_hover img-link img-wrap&quot; href=&quot;images_post/big_photo.jpg&quot;&gt; 
+			&lt;span class=&quot;overlay&quot;&gt;&lt;/span&gt; &lt;span class=&quot;link-icon&quot;&gt;&lt;/span&gt; 
+			&lt;img src=&quot;images_post/pic_thumb.jpg&quot; alt=&quot;Portfolio 4&quot;&gt; 
+			&lt;/a&gt; 
+		&lt;/div&gt;
+		&lt;h4 class=&quot;post_title&quot;&gt;&lt;a href=&quot;portfolio.html&quot;&gt;Portfolio 4&lt;/a&gt;&lt;/h4&gt;
+        &lt;h5 class=&quot;post_subtitle&quot;&gt;Web&lt;/h5&gt;
+&lt;/article&gt;
+</pre>
+        <h4>Portfolio category</h4>
+        <p>Filtration in the portfolio block is being performed with the data filter and assigning to it the class of the class block you need.</p>
+        <p> data-filter=".web" will filter all the portfolio blocks that contain the class "web". Portfolio blocks are listed in the passage "<a href="#portfolioExample">Portfolio example</a>". </p>
+        <pre>&lt;ul id=&quot;portfolio_iso_filters&quot;&gt;
+		&lt;li&gt;&lt;a class=&quot;current&quot; data-filter=&quot;*&quot; href=&quot;#&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a data-filter=&quot;.category_4&quot; href=&quot;#&quot;&gt;Web&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a data-filter=&quot;.category_6&quot; href=&quot;#&quot;&gt;Photo&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a data-filter=&quot;.category_5&quot; href=&quot;#&quot;&gt;Graphics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+        <h3 id="skillsPage">Skills</h3>
+        <p><img src="images/color.jpg" alt=""></p>
+        <p>The level on the diagram is set in the data-process using percentage from 0 to 100. </p>
+        <pre>&lt;aside class=&quot;widget widget_skills&quot;&gt;
+&lt;h3 class=&quot;widget_title&quot;&gt;Programming skills&lt;/h3&gt;
+&lt;div class=&quot;widget_inner style_1&quot;&gt;
+		&lt;div class=&quot;skills_row odd first&quot;&gt;
+			&lt;span class=&quot;caption&quot;&gt;Wordpress&lt;/span&gt;
+			&lt;span class=&quot;progressbar&quot;&gt;
+				&lt;span data-process=&quot;90%&quot; class=&quot;progress blue&quot;&gt;
+					&lt;span class=&quot;value&quot;&gt;90%&lt;/span&gt;
+				&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+ 	&lt;div class=&quot;skills_row even&quot;&gt;
+			&lt;span class=&quot;caption&quot;&gt;PHP&lt;/span&gt;
+			&lt;span class=&quot;progressbar&quot;&gt;
+				&lt;span data-process=&quot;80%&quot; class=&quot;progress aqua&quot;&gt;
+					&lt;span class=&quot;value&quot;&gt;80%&lt;/span&gt;
+				&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+		...
+&lt;/div&gt;
+&lt;/aside&gt;
+</pre>
+      </section>
+      <section id="contacts">
+        <h3>Contact form</h3>
+        An e-mail of a message receiver from the contact form can be specified in the file <br>
+        directory site...include/sendmail.php ('assets' folder), line 13:
+        <pre>
+$contact_email = 'your_mail@mail.com';</pre>
+        <h4 id="contactBlock">Contacts</h4>
+        <p>Contacts are stored in the main root file. <br>
+          directory site.../index.html, line : </p>
+        <pre>&lt;div id=&quot;profile_data&quot;&gt;
+    &lt;div class=&quot;profile_row name&quot;&gt; &lt;span class=&quot;th&quot;&gt;Name:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;<b><u>Jefferson Sarah</u></b>&lt;/span&gt; &lt;/div&gt;
+    &lt;div class=&quot;profile_row birth&quot;&gt; &lt;span class=&quot;th&quot;&gt;Date of birth:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;<b><u>June 6, 1970</u></b>&lt;/span&gt; &lt;/div&gt;
+    &lt;div class=&quot;profile_row address&quot;&gt; &lt;span class=&quot;th&quot;&gt;Address:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;<b><u>San Francisco, CA 94102, US</u></b>&lt;/span&gt; &lt;/div&gt;
+    &lt;div class=&quot;profile_row phone&quot;&gt; &lt;span class=&quot;th&quot;&gt;Phone:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;<b><u>+1-541-754-3010</u></b>&lt;/span&gt; &lt;/div&gt;
+    &lt;div class=&quot;profile_row email&quot;&gt; &lt;span class=&quot;th&quot;&gt;Email:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;<b><u>support@themerex.net</u></b>&lt;/span&gt; &lt;/div&gt;
+    &lt;div class=&quot;profile_row website&quot;&gt; &lt;span class=&quot;th&quot;&gt;Website:&lt;/span&gt;&lt;span class=&quot;td&quot;&gt;&lt;a target=&quot;_blank&quot; href=&quot;<b><u>http://themeforest.net/user/themerex</u></b>&quot;&gt;<b><u>http://themeforest.net/user/themerex</u></b>&lt;/a&gt;&lt;/span&gt; &lt;/div&gt;
+&lt;/div&gt;</pre>
+        <h4>Google Map</h4>
+        <p>The address for map comes from the profile's <a href="#contactBlock">contacts</a> block automatically.</p>
+        <h4>QRcode</h4>
+        <p>Information for QRcode comes from <a href="#contactBlock">contact</a> information.</p>
+      </section>
+      <section id="print">
+        <h3>Print page</h3>
+        Print version of the resume <strong>print.html</strong>
+<h4>Contact information</h4>
+        <p>You can edit contact information in the same way as you edit  <a href="#contactBlock">contact information</a> on homepage. </p>
+        <p>Inforrmation on how to edit <a href="#skillsPage">skills</a>.</p>
+      </section>
+      <section id="psd">
+        <h3>PSD Files</h3>
+        <p>You’ll find  PSD folder in our template archive.</p>
+        Note, that this is our working material and there can be some mismatch with design presented in html / php version. But basically you’ll find lots of styles and graphics to change Increase design or use them on your own. </section>
+      <section id="sources">
+        <h3>Sources and Credits</h3>
+        <p>This section discloses the sources of various files used within the theme and describes their function. Use this section to gain an understanding on how the theme functions behind the scenes if considering any type of modification.</p>
+        <ul>
+          <li>Fonts:
+            <ul>
+              <li>sans-serif (standard)</li>
+              <li>Lato (non standard)</li>
+            </ul>
+          </li>
+        </ul>
+        <p>All non standard fonts are from Google Web Fonts</p>
+        <p>We have used the pictures from: <br>
+          http://www.bigstockphoto.com/</p>
+        <p>All images are copyrighted to their respective owners and not available for download with this theme.</p>
+      </section>
+      <section>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'll be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have any questions that are beyond the scope of this help file, please feel free to email via our user page contact form from our Profile Page on ThemeForest. Thank you so much!</section>
+      <section id="support">
+        <h3>ThemeREX support</h3>
+        <h4>Additional information from ThemeREX:</h4>
+        <p>“Theme Rex” support team is happy to welcome you here! Our operators and developers are always glad to help our customers. Should you have any questions, you may contact us for support:</p>
+        <p>10.00 – 19.00 (CET), Monday till Friday.</p>
+        <p>What is important to know about ThemeREX Support Policy</p>
+        <ul>
+        </ul>
+        <li>To get a pre-purchase advice, you may post in the theme’s forum </li>
+        <li>To get a response more promptly, you are recommended to use our Ticket-system (just click on banner “Support Sys” on the item page) <br>
+          <b>Important!</b> For correct work of Ticket-system, you mustn’t switch cookies in your browser off</li>
+        <li>We try to answer your questions within 5-10 hours. However, if any delay occurs it doesn’t mean that we forgot about you. Some of the issues require testing and analyzing, so that we could help you more profoundly</li>
+        <br>
+        <p> We love to intercommunicate with our customers from all over the world. We always love to explain how our themes work. <b>However, sometimes we have to say No:</b> </p>
+        <ul>
+          <li>Please, note! We do not support queries if you do not have a purchase code</li>
+          <li>Item support does not include:</li>
+          <ul>
+            <li>Customization and installation services</li>
+            <li>Support for third party software and plug-ins</li>
+          </ul>
+        </ul>
+        <br>
+        <p> <b>How to find a purchase key (<a href="http://themerex.net/wp-content/uploads/2013/10/10159702133_9b3b4eeeec_o.png">see the screenshot</a>):</b> </p>
+        <ul>
+          <li>open the ‘downloads’ tab in your account on ThemeForest</li>
+          <li>find our theme in the list of products</li>
+          <li>click ‘download’ button, and in the drop down menu select “license sertificate & purchase code”</li>
+        </ul>
+      </section>
+      <h4 style="margin-left:50px">ThemeREX</h4>
     </div>
-    <div id="main">
-    <div id="leftcol_container">
-    	<div class="leftcol">
-        	<h2>Articles</h2>
-        	<ul>
-            	<li><a href="#">Designing websites </a></li>
-            	<li><a href="#">XHTML for dummies</a></li>
-            	<li><a href="#">How CSS works</a></li>
-            	<li><a href="#">SEO Marketing</a></li>
-            	<li><a href="#">Search Submission</a></li>
-            	<li><a href="#">All about CMS</a></li>
-                <li><a href="#">Designing for Joomla</a></li>
-                <li><a href="#">Google Adsense help</a></li>
-                <li><a href="#">Marketing Online</a></li>
-                <li><a href="#">Pay Per Click</a></li>
-                <li><a href="#">Designing XHTML 1.1</a></li>
-                <li><a href="#">Making Money Online</a></li>
-                <li><a href="#">Web Templates</a></li>
-                <li><a href="#">Javascript for all</a></li>
-                <li><a href="#">Why jQuery is Great</a></li>
-                <li><a href="#">What is Ajax</a></li>
-            </ul>
-        	<p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <a href="#">Contact Us</a>
-      </div>
-      <div class="leftcol_bottom"></div>
-      </div>
-      
-        <div id="maincol_container">
-        <div class="maincol">          
-        <h2>Template Usage</h2>
-        <p>You may use this template in any way you please, <strong>just leave the link at the bottom of the page</strong> back to me.  I love to see how and where my templates are used, so feel free to email me from my site <a href="http://bryantsmith.com">BryantSmith.com</a>.  I also offer professional design, programming, and marketing services, so if you need something a bit more complex, or need help with this template, I'd be happy to help.  I design these templates for free to help those you may not have the time or budget for a full scale custom site, but always appreciate small donations for my services (paypal: paypal@bryantsmith.com).   Thank you, and enjoy the template!<br />
-          <br />
-        </p>
-        
-        <h2>Customizing the columns</h2>
-        <p>All of the left and right columns have been created so that you can either have one continues box that goes all the way to the bottom, or several different boxes in each column, however you like it.  To make multiple columns, <strong>select the divs 'leftcol' and 'leftcol_bottom'</strong>, copy, and paste the below the current ones (still inside of the 'leftcol_container' div).   This will create an exact copy of your column directly underneath your current one.  The left menu is an example of a long single div, while the right is multiple divs using the above method. 
-        <p>   This process is exactly the same for the main column (replace 'maincol' for 'leftcol') and the right as well ('rightcol' instead of 'leftcol').  The site looks good either way you do it, so experiment around with what works best for you.  The box below this one shows what an additional main column looks like (as opposed to a long single one)
-        </p>
-        <p>&nbsp;</p>
-        
-        <h2>More Template Information</h2>
-        <p>If you want to change the picture at the top to something else, the easiest way to do this would be to overwrite the current image (located at: /images/picture.jpg) with your own JPEG image.  Just make sure to keep the same dimensions of 900x237.  The headings in all the columns are &lt;h2&gt; tags, and are automatically formatted for you.</p>
-        </div>
-        <div class="maincol_bottom"></div>
-        
-        <div class="maincol">          
-        <h2>Customizing the columns</h2>
-<p>All of the left and right columns have been created so that you can either have one continues box that goes all the way to the bottom, or several different boxes in each column, however you like it.  To make multiple columns, select the divs 'leftcol' and 'leftcol_bottom', copy, and paste the below the current ones (still inside of the 'leftcol_container' div).   This will create an exact copy of your column directly underneath your current one.  The left menu is an example of a long single div, while the right is multiple divs using the above method. <p>   This process is exactly the same for the main column (replace 'maincol' for 'leftcol') and the right as well ('rightcol' instead of 'leftcol').  The site looks good either way you do it, so experiment around with what works best for you.  The box below this one shows what an additional main column looks like (as opposed to a long single one)</p>
-        </div>
-        <div class="maincol_bottom"></div>
-        </div>
-        
-        
-     <div id="rightcol_container">
-        
-        
-        <div class="rightcol">
-        <h2>Categories</h2>
-        	<ul>
-            	<li><a href="#">Design</a></li>
-            	<li><a href="#">Marketing</a></li>
-            	<li><a href="#">SEO</a></li>
-            	<li><a href="#">Graphics</a></li>
-            	<li><a href="#">Flash</a></li>
-            	<li><a href="#">Animation</a></li>
-            </ul>
-        </div>
-        <div class="rightcol_bottom"></div>
-        
-        <div class="rightcol">
-        <h2>Blogs</h2>
-        	<ul>
-            	<li><a href="#">John's Web design</a></li>
-            	<li><a href="#">The Design Blog</a></li>
-            	<li><a href="#">Designs4all</a></li>
-            	<li><a href="#">Free XHTML Templates</a></li>
-            	<li><a href="#">WebGraphics</a></li>
-            	<li><a href="#">HowToWeb</a></li>
-            </ul>
-        </div>
-        <div class="rightcol_bottom"></div>
-        
-        <div class="rightcol">
-        <h2>Links</h2>
-        	<ul>
-            	<li><a href="#">Google</a></li>
-            	<li><a href="#">Yahoo</a></li>
-            	<li><a href="#">Bing</a></li>
-            	<li><a href="#">Ask</a></li>
-            	<li><a href="#">Dogpile</a></li>
-            	<li><a href="#">Altavista</a></li>
-            </ul>
-        </div>
-        <div class="rightcol_bottom"></div>
-        
-       <div class="rightcol">
-        <h2>Most Recent</h2>
-        	<ul>
-            	<li><a href="#">Web Designers</a></li>
-            	<li><a href="#">Internet Marketing</a></li>
-            	<li><a href="#">Easy SEO</a></li>
-            	<li><a href="#">Web Graphics</a></li>
-            	<li><a href="#">Flash Animation</a></li>
-            </ul>
-        </div>
-        <div class="rightcol_bottom"></div>
-        
-        
-        </div>
-        <div class="clear"></div>
-        
-         <div id="footer"><h3><a href="http://www.bryantsmith.com">web design florida</a></div>
   </div>
-
 </div>
 </body>
 </html>
