@@ -18,7 +18,7 @@ body { color: #060606; font-size: 15px; line-height: 17px; }
 h3.category_title { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); color: #000000; font-size: 26px; margin-bottom: 19px; padding: 0; text-transform: uppercase; }
 h3.category_title .category_title_icon { display: none; }
 .wrapper.resume_wrapper { padding-top: 0; }
-.resume_period { color: #4CA5D0; float: right; font-size: 26px; line-height: 32px; margin-bottom: -9px; }
+.resume_period { color: #4CA5D0; float: right; font-size: 20px; line-height: 32px; margin-bottom: -9px; }
 .post_subtitle { clear: both; }
 .post_title { font-size: 18px; font-weight: 700; margin-bottom: 0; overflow: hidden; padding-top: 3px; }
 .post_subtitle { color: #4CA5D0; font-size: 18px; margin-bottom: 18px; padding-left: 18px; text-transform: capitalize; }
