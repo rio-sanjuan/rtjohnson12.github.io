@@ -59,14 +59,14 @@
             </div>
           </div>
           <div class="section_body profile_section_body">
-            <div class="proile_body"> I am currently a student at the University of Washington getting my Master's degree in Computational Finance & Risk Management. I am planning on graduating December 2019. </div>
+            <div class="proile_body"> I am currently a student at the University of Washington getting my Master's degree in Computational Finance & Risk Management. I am planning on graduating December 2019.</div>
           </div>
         </section>
         <div id="mainpage_accordion_area"> 
           
           <!-- RESUME -->
           <section class="section resume_section even" id="resume">
-            <div id="resume_buttons"> <a target="_blank" id="resume_link" href="print.html"><span class="label">Print</span><span class="icon-print icon"></span></a> <a target="_blank" id="resume_link_download"><span class="label">Download</span><span class="icon-download icon"></span></a> </div>
+            <div id="resume_buttons"> <a target="_blank" id="resume_link" href="print.html"><span class="label">Print</span><span class="icon-print icon"></span></a> <!--<a target="_blank" id="resume_link_download"><span class="label">Download</span><span class="icon-download icon"></span></a>--> </div>
             <div class="section_header resume_section_header">
               <h2 class="section_title resume_section_title"><a href="#"><span class="icon icon-align-left"></span><span class="section_name">Resume</span></a><span class="section_icon"></span></h2>
             </div>
@@ -161,7 +161,14 @@
                         <h5 class="post_subtitle">B.S. Mathematics & Computer Science, 3.5</h5>
                       </div>
                       <div class="post_body resume_post_body">
-                        <p>Graduated with dual emphases in Financial Mathematics and Data Science with a minor in German Language and Culture. I was awarded the Paul R. Halmos award which honors a graduating senior with an outstanding academic record judged to have distinguished themselves beyond the standard coursework.</p><br><p>While at SCU, I served as the president of both the mathematics honor society, Pi Mu Epsilon, and the Math / Cs Society, a social group organizing game nights, Cs tutorials, and other events. I also worked as a math tutor for 3 years, as a computer science TA for Object-Oriented Programming (C++), Intro. to Programming, and Data Science, and as a homework grader for several courses.</p>
+                        <p>Graduated with dual emphases in Financial Mathematics and Data Science with a minor in German Language and Culture. I was awarded the Paul R. Halmos award which honors a graduating senior with "an outstanding academic record judged to have distinguished themselves beyond the standard coursework."</p>
+                        <br>
+                        <p>While at SCU, I was involved with the following groups and activities:<ul id="resume_scu">
+                          <li>President of Mathematics Honor Society (Pi Mu Epsilon)</li>
+                          <li>President of Math/CS Society</li>
+                          <li>Mathematics Tutor and Homework Grader</li>
+                          <li>Computer Science Teaching Assistant</li>
+                        </ul></p>
                       </div>
                     </article>
                   </div>
@@ -184,16 +191,18 @@
               <div class="portfolio_wrapper">
                 <ul id="portfolio_iso_filters">
                   <li><a class="current" data-filter="*" href="#">All</a></li>
+                  <li><a data-filter=".category_1" href="#">Ideas</a></li>
+                  <li><a data-filter=".category_2" href="#">GitHub</a></li>
                   <li><a data-filter=".category_3" href="#">Kaggle</a></li>
-                  <li><a data-filter=".category_4" href="#">Topic Exploration</a></li>
-                  <li><a data-filter=".category_6" href="#">Photo</a></li>
+                  <li><a data-filter=".category_4" href="#">Web</a></li>
                   <li><a data-filter=".category_5" href="#">Graphics</a></li>
+                  <li><a data-filter=".category_6" href="#">Photo</a></li>
                 </ul>
                 <div class="portfolio_items">
-                  <article class="post portfolio_post portfolio_post_1 first even category_4 category_6">
-                    <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="http://placehold.it/800x400"> <span class="overlay"></span> <span class="link-icon"></span> <img src="http://placehold.it/252x174" alt="Portfolio item 14" /> </a> </div>
-                    <h4 class="post_title"><a href="portfolio.html">Portfolio item 14</a></h4>
-                    <h5 class="post_subtitle">Web, Photo</h5>
+                  <article class="post portfolio_post portfolio_post_1 even category_1 category_2">
+                    <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="projects/analogtivation/analogtivation.html"> <span class="overlay"></span> <span class="link-icon"></span> <img src="http://placehold.it/252x174" alt="Analogtivation" /> </a> </div>
+                    <h4 class="post_title">Analogtivation</h4>
+                    <h5 class="post_subtitle">Ideas, GitHub</h5>
                   </article>
                   <article class="post portfolio_post portfolio_post_2 odd category_4 category_6">
                     <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="http://placehold.it/800x400"> <span class="overlay"></span> <span class="link-icon"></span> <img src="http://placehold.it/252x174" alt="Portfolio item 13" /> </a> </div>
@@ -260,11 +269,6 @@
                     <h4 class="post_title"><a href="portfolio.html">Portfolio item 2</a></h4>
                     <h5 class="post_subtitle">Photo</h5>
                   </article>
-                  <article class="post portfolio_post portfolio_post_15 even category_1 category_5">
-                    <div class="post_pic portfolio_post_pic"> <a class="w_hover img-link img-wrap" href="http://placehold.it/800x400"> <span class="overlay"></span> <span class="link-icon"></span> <img src="http://placehold.it/252x174" alt="Portfolio item 15" /> </a> </div>
-                    <h4 class="post_title"><a href="portfolio.html">Portfolio item 1</a></h4>
-                    <h5 class="post_subtitle">Web, Graphics</h5>
-                  </article>
                 </div>
                 <div class="portfolio_iso_pages">
                   <ul id="portfolio_iso_pages">
@@ -280,7 +284,7 @@
           <!-- CONTACTS -->
           <section class="section contact_section even" id="contact">
             <div class="section_header contact_section_header">
-              <h2 class="section_title contact_section_title"><a href="#"><span class="icon icon-envelope-alt"></span><span class="section_name">Contacts</span></a><span class="section_icon"></span></h2>
+              <h2 class="section_title contact_section_title"><a href="#"><span class="icon icon-envelope-alt"></span><span class="section_name">Contact</span></a><span class="section_icon"></span></h2>
             </div>
             <div class="section_body contact_section_body">
               <!-- <div id="googlemap_data">
