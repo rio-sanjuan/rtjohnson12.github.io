@@ -20,6 +20,13 @@ jQuery(window).load(function() {
 	}
 });
 
+jQuery(window).load(function() {
+	"use strict";
+	if (window.location.hash==='#reading') {
+		jQuery('#reading .section_header .section_title a').trigger('click');
+	}
+});
+
 
 jQuery(document).ready(function(){
 	
@@ -235,6 +242,10 @@ jQuery(document).ready(function(){
 					// Isotope refresh
 					if (jQuery('.portfolio_items.isotope').length > 0 && jQuery('.portfolio_items.isotope:hidden').length === 0) {
 						jQuery('.portfolio_items').isotope({ filter: getIsotopeFilter() });}
+				} else if (tab.hasClass('reading_section_title')) {		// Reading
+					// Isotope refresh
+					if (jQuery('.reading_items.isotope').length > 0 && jQuery('.reading_items.isotope:hidden').length === 0) {
+						jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });}
 				} else if (tab.hasClass('contact_section_title')) {			// Contact
 					// Google info
 					if( QRadress != null && QRadress != "" ) { jQuery('.add_info .address').slideDown().find('.td').html(QRadress) } 
@@ -460,6 +471,82 @@ function pagesClear() {
 	jQuery(".portfolio_iso_pages").hide();
 	curIsotopePage = '';
 }
+
+/* Isotope init */
+var curIsotopeFilter = '*';
+var curIsotopePage = '';
+jQuery(document).ready(function() {
+	if(jQuery('.reading_items').length !== 0) {
+		jQuery('.reading_items')
+			.isotope({ 
+				itemSelector: '.reading_post',
+				transformsEnabled : true,
+				duration: 750,
+				resizable: true,
+				resizesContainer: true,
+				layoutMode: 'fitRows'
+			});
+		jQuery('.reading_items').css('height', '220px').find('article').css('transform' ,'none');
+		jQuery('#reading_iso_filters li a').click(function(){
+			var selector = jQuery(this).attr('data-filter-2');
+			curIsotopeFilter = selector;
+			readingPagesClear();
+			pagesBuild();
+			jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });
+			jQuery(this).parents('#reading_iso_filters').find('a').removeClass('current');
+			jQuery(this).addClass('current');
+			return false;
+		});
+		jQuery('#reading_iso_pages').on('click', 'li a', function(){
+			var selector = jQuery(this).attr('data-filter-2');
+			curIsotopePage = selector;
+			jQuery('#reading_iso_pages_current').html(selector.substr(selector.lastIndexOf('_')+1));
+			jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });
+			jQuery(this).parents('#reading_iso_pages').find('a').removeClass('current');
+			jQuery(this).addClass('current');
+			return false;
+		});
+		readingPagesBuild();
+	}	
+});
+function getIsotopeFilter() {
+	var flt = curIsotopeFilter!='*' ? curIsotopeFilter : '';
+	flt += curIsotopePage!='' ? ((flt!='' ? '' : '') + curIsotopePage) : '';
+	flt=='' ? '*' : '';
+	return flt;
+}
+function readingPagesBuild() {
+	var selector = '.reading_items article'+(curIsotopeFilter!='*' ? curIsotopeFilter : '');
+	var items = jQuery(selector);
+	var total = items.length;
+	jQuery(".reading_iso_pages").hide();
+	if (total > ppp) {
+		var pagesList = '';
+		var pagesTotal = Math.ceil(total/ppp);
+		for (var i=1; i<=pagesTotal; i++)
+			pagesList += '<li><a href="#" data-filter-2=".page_' + i + '"' + (i==1 ? ' class="current"' : '') + '>' + i + '</a></li>';
+		items.each(function(idx, obj) {
+			var pg = Math.floor(idx/ppp)+1;
+			jQuery(obj).attr('data-page', pg).addClass('page_'+pg);
+		});
+		jQuery(".reading_iso_pages").show();
+		jQuery("#reading_iso_pages").html(pagesList);
+		jQuery("#reading_iso_pages_current").html("1");
+		jQuery("#reading_iso_pages_total").html(pagesTotal);
+		curIsotopePage = '.page_1';
+	}
+}
+function readingPagesClear() {
+	jQuery('.reading_items article').each(function (idx, obj) {
+		var pg = jQuery(obj).attr('data-page');
+		if (pg > 0) {
+			jQuery(obj).attr('data-page', '').removeClass('page_'+pg);
+		}
+	});
+	jQuery(".reading_iso_pages").hide();
+	curIsotopePage = '';
+}
+
 function hideCommentScroll() {
 	var com_top = jQuery('#comments').offset().top;
 	var win_top = jQuery(window).scrollTop();
@@ -494,6 +581,13 @@ jQuery(window).load(function(){
 		"use strict";
 		if (window.location.hash==='#portfolio') {
 			jQuery('#portfolio .section_header .section_title a').trigger('click');
+		}
+	});
+	
+	jQuery(window).load(function() {
+		"use strict";
+		if (window.location.hash==='#reading') {
+			jQuery('#reading .section_header .section_title a').trigger('click');
 		}
 	});
 

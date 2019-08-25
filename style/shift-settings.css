@@ -25,6 +25,14 @@
 	border-color: #4ca5d0;
 
 }
+.dark #reading_iso_filters li a.current,
+.dark #reading_iso_filters li a.current:hover ,
+#reading_iso_filters li a.current ,
+#reading_iso_filters li a.current:hover  {
+	background-color: #4ca5d0;
+	border-color: #4ca5d0;
+
+}
 /*Green*/
 .green,
 .section_header .section_title.resume_section_title a span.icon,
@@ -38,6 +46,7 @@
 /*yellow*/
 .yellow,
 .section_header .section_title.portfolio_section_title a span.icon,
+.section_header .section_title.reading_section_title a span.icon,
 .section_header.audio .section_title strong span.section_name,
 .section_header.audio .section_title strong span.icon {
 	background-color: #ffbc38;
