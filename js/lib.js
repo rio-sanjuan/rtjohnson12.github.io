@@ -20,14 +20,6 @@ jQuery(window).load(function() {
 	}
 });
 
-jQuery(window).load(function() {
-	"use strict";
-	if (window.location.hash==='#reading') {
-		jQuery('#reading .section_header .section_title a').trigger('click');
-	}
-});
-
-
 jQuery(document).ready(function(){
 	
 	//Google & QRcode	
@@ -473,11 +465,11 @@ function pagesClear() {
 }
 
 /* Isotope init */
-var curIsotopeFilter = '*';
-var curIsotopePage = '';
+var curReadingIsotopeFilter = '*';
+var curReadingIsotopePage = '';
 jQuery(document).ready(function() {
-	if(jQuery('.reading_items').length !== 0) {
-		jQuery('.reading_items')
+	if(jQuery('.portfolio_items').length !== 0) {
+		jQuery('.portfolio_items')
 			.isotope({ 
 				itemSelector: '.reading_post',
 				transformsEnabled : true,
@@ -486,22 +478,22 @@ jQuery(document).ready(function() {
 				resizesContainer: true,
 				layoutMode: 'fitRows'
 			});
-		jQuery('.reading_items').css('height', '220px').find('article').css('transform' ,'none');
+		jQuery('.portfolio_items').css('height', '220px').find('article').css('transform' ,'none');
 		jQuery('#reading_iso_filters li a').click(function(){
 			var selector = jQuery(this).attr('data-filter-2');
-			curIsotopeFilter = selector;
-			readingPagesClear();
+			curReadingIsotopeFilter = selector;
+			pagesClear();
 			pagesBuild();
-			jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });
+			jQuery('.reading_items').isotope({ filter: getReadingIsotopeFilter() });
 			jQuery(this).parents('#reading_iso_filters').find('a').removeClass('current');
 			jQuery(this).addClass('current');
 			return false;
 		});
 		jQuery('#reading_iso_pages').on('click', 'li a', function(){
 			var selector = jQuery(this).attr('data-filter-2');
-			curIsotopePage = selector;
+			curReadingIsotopePage = selector;
 			jQuery('#reading_iso_pages_current').html(selector.substr(selector.lastIndexOf('_')+1));
-			jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });
+			jQuery('.reading_items').isotope({ filter: getReadingIsotopeFilter() });
 			jQuery(this).parents('#reading_iso_pages').find('a').removeClass('current');
 			jQuery(this).addClass('current');
 			return false;
@@ -509,14 +501,14 @@ jQuery(document).ready(function() {
 		readingPagesBuild();
 	}	
 });
-function getIsotopeFilter() {
-	var flt = curIsotopeFilter!='*' ? curIsotopeFilter : '';
-	flt += curIsotopePage!='' ? ((flt!='' ? '' : '') + curIsotopePage) : '';
+function getReadingIsotopeFilter() {
+	var flt = curReadingIsotopeFilter!='*' ? curReadingIsotopeFilter : '';
+	flt += curReadingIsotopePage!='' ? ((flt!='' ? '' : '') + curReadingIsotopePage) : '';
 	flt=='' ? '*' : '';
 	return flt;
 }
 function readingPagesBuild() {
-	var selector = '.reading_items article'+(curIsotopeFilter!='*' ? curIsotopeFilter : '');
+	var selector = '.reading_items article'+(curReadingIsotopeFilter!='*' ? curReadingIsotopeFilter : '');
 	var items = jQuery(selector);
 	var total = items.length;
 	jQuery(".reading_iso_pages").hide();
@@ -533,7 +525,7 @@ function readingPagesBuild() {
 		jQuery("#reading_iso_pages").html(pagesList);
 		jQuery("#reading_iso_pages_current").html("1");
 		jQuery("#reading_iso_pages_total").html(pagesTotal);
-		curIsotopePage = '.page_1';
+		curReadingIsotopePage = '.page_1';
 	}
 }
 function readingPagesClear() {
@@ -544,7 +536,7 @@ function readingPagesClear() {
 		}
 	});
 	jQuery(".reading_iso_pages").hide();
-	curIsotopePage = '';
+	curReadingIsotopePage = '';
 }
 
 function hideCommentScroll() {
