@@ -237,7 +237,7 @@ jQuery(document).ready(function(){
 				} else if (tab.hasClass('reading_section_title')) {		// Reading
 					// Isotope refresh
 					if (jQuery('.reading_items.isotope').length > 0 && jQuery('.reading_items.isotope:hidden').length === 0) {
-						jQuery('.reading_items').isotope({ filter: getIsotopeFilter() });}
+						jQuery('.reading_items').isotope({ filter: getReadingIsotopeFilter() });}
 				} else if (tab.hasClass('contact_section_title')) {			// Contact
 					// Google info
 					if( QRadress != null && QRadress != "" ) { jQuery('.add_info .address').slideDown().find('.td').html(QRadress) } 
@@ -468,8 +468,8 @@ function pagesClear() {
 var curReadingIsotopeFilter = '*';
 var curReadingIsotopePage = '';
 jQuery(document).ready(function() {
-	if(jQuery('.portfolio_items').length !== 0) {
-		jQuery('.portfolio_items')
+	if(jQuery('.reading_items').length !== 0) {
+		jQuery('.reading_items')
 			.isotope({ 
 				itemSelector: '.reading_post',
 				transformsEnabled : true,
@@ -478,7 +478,7 @@ jQuery(document).ready(function() {
 				resizesContainer: true,
 				layoutMode: 'fitRows'
 			});
-		jQuery('.portfolio_items').css('height', '220px').find('article').css('transform' ,'none');
+		jQuery('.reading_items').css('height', '220px').find('article').css('transform' ,'none');
 		jQuery('#reading_iso_filters li a').click(function(){
 			var selector = jQuery(this).attr('data-filter-2');
 			curReadingIsotopeFilter = selector;
